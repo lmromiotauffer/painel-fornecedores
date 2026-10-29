@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
-import { ChartColumn, Table2 } from "lucide-react";
+import { ChartColumn, Contact, Table2 } from "lucide-react";
 import { Avaliacoes } from "@/pages/Avaliacoes/Avaliacoes";
+import { DadosCadastrais } from "@/pages/DadosCadastrais/DadosCadastrais";
 import { VisaoGeral } from "@/pages/VisaoGeral/VisaoGeral";
 
 const default_description =
@@ -16,8 +17,8 @@ export interface RouteDefinition {
 
 export const routesDefinition: RouteDefinition[] = [
   {
-    label: "Visão geral",
-    href: "/visao-geral",
+    label: "Ranking",
+    href: "/ranking",
     description: default_description,
     element: <VisaoGeral />,
     icon: <Table2 size={16} />,
@@ -28,5 +29,12 @@ export const routesDefinition: RouteDefinition[] = [
     description: default_description,
     element: <Avaliacoes />,
     icon: <ChartColumn size={16} />,
+  },
+  {
+    label: "Dados Cadastrais",
+    href: "/dados-cadastrais",
+    description: default_description,
+    element: <DadosCadastrais />,
+    icon: <Contact size={16} />,
   },
 ];

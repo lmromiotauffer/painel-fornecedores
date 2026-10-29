@@ -31,15 +31,13 @@ Também inclui:
 
 Sem seleção em Ano/mês da medição, o painel mostra o mês anterior ao último ranking disponível, como no app original. Só esse filtro troca o mês: selecionar um fornecedor ou município não muda o período (regra em `src/shared/qlik/periodo.ts`).
 
-### Visão geral (`/#/visao-geral`)
+### Ranking (`/#/ranking`)
 
 - Indicadores: Fornecedores, Contratos, Obras e BDP médio do mês em contexto, com indicação da faixa, como “≥ 7,5 Bom”.
 
 - Ranking do mês: Top 10 por posição (campo `Rank`), com medalha no pódio e barra de BDP de 0 a 10 marcada nas referências oficiais. Empates repetem a posição.
 
 - Ficha do fornecedor: ao selecionar uma linha, a tabela mostra apenas esse fornecedor e abre a ficha abaixo, com dados da empresa, contato, últimas avaliações e a evolução do BDP. Se o fornecedor não estiver no Top 10 do mês, a tabela avisa e a ficha continua disponível.
-
-- Dados cadastrais: CNPJ, município, ramo de atividade, endereço e contatos.
 
 ### Avaliações (`/#/avaliacoes`)
 
@@ -48,6 +46,10 @@ Sem seleção em Ano/mês da medição, o painel mostra o mês anterior ao últi
 - Distribuição das avaliações por faixa de nota: gráfico de barras com quantidade e percentual.
 
 - Avaliação por medição e critério: tabela com data, fornecedor, critério, conceito (chip na cor da faixa), nota, medição, contrato, código da obra, fiscal e ano/mês.
+
+### Dados Cadastrais (`/#/dados-cadastrais`)
+
+- Tabela com CNPJ, município, ramo de atividade, endereço e contatos.
 
 ## Nota BDP
 

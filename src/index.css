@@ -1032,6 +1032,17 @@ body::after {
   animation-delay: 160ms;
 }
 
+/* Ficha (Dados cadastrais): ombros = path 2, cabeça = circle; argolas e cartão ficam parados.
+   A pessoa afunda na base do cartão (y=21) e se levanta de novo, ombros antes da cabeça: a ficha é aberta. */
+.icone-nav[data-animar="true"] .lucide-contact > :is(:nth-child(2), circle) {
+  transform-origin: 12px 21px;
+  animation: ficha-apresentar 500ms ease-in-out;
+}
+
+.icone-nav[data-animar="true"] .lucide-contact > circle {
+  animation-delay: 80ms;
+}
+
 /* transform, não scale: em elementos SVG o Chromium não compõe translate/rotate/scale independentes
    (CompositorAnimations: SVGTargetHasIndependentTransformProperty) e o gesto congela enquanto a rota monta. */
 @keyframes linhas-acomodar {
@@ -1049,6 +1060,15 @@ body::after {
   }
   75% {
     transform: scaleY(1.15);
+  }
+}
+
+@keyframes ficha-apresentar {
+  40% {
+    transform: translateY(3px) scale(0.6);
+  }
+  75% {
+    transform: translateY(-1px) scale(1.06);
   }
 }
 
